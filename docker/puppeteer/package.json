@@ -1,0 +1,15 @@
+{
+  "name": "e2e-test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "for e2e test",
+  "main": "/home/pptruser/test.js",
+  "scripts": {
+    "test": "node /home/pptruser/test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^1.20.0"
+  }
+}

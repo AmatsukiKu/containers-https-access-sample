@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  nginx:
+    image: nginx:mainline-alpine
+    volumes:
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./docker/nginx/ssl/:/etc/nginx/ssl/
+      - ./docker/nginx/index.html:/usr/share/nginx/html/index.html
+  puppeteer:
+    build:
+      context: ./docker/puppeteer
+    cap_add:
+      - SYS_ADMIN
+    depends_on:
+      - nginx
